@@ -8,6 +8,7 @@ public class playerLife : MonoBehaviour
     {
 
     }
+
     void Update()
     {
         if ((transform.position.y < -0.5f) && (dead == false))
