@@ -7,6 +7,8 @@ TagManager:
   - limites
   - obstaculos
   - limitesLaterais
+  - ammo
+  - alvos
   layers:
   - Default
   - TransparentFX
