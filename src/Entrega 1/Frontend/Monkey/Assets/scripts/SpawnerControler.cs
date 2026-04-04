@@ -8,7 +8,8 @@ public class SpawnerControler : MonoBehaviour
     public float veloMovimento = 5f;
     public float tempoVida = 3f;
     public GameObject player;
-   
+    [SerializeField] Municao municaoScript;
+
     //Start vazio porque o spawn tiro só vai ser chamado quando clicado
     void Start()
     {
@@ -18,11 +19,13 @@ public class SpawnerControler : MonoBehaviour
     
     void Update()
     {
-        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player
-        if (Input.GetMouseButtonDown(0))
+        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player e "gasta" uma bala
+        if (Input.GetMouseButtonDown(0) && (municaoScript.municao > 0))
         {
             Spawnar();
             player = GameObject.FindGameObjectWithTag("Player");
+            municaoScript.municao--;
+            //municaoScript.atualizarMunicao();
         }
     }
     
