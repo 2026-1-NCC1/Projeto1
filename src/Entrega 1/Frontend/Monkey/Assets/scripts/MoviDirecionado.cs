@@ -9,7 +9,7 @@ public class MoviDirecionado : MonoBehaviour
     private float timer;
     private bool inicializado = false;
 
-    //fun��o para puxar as vari�veis do outro scritpt como tamb�m declarar o valor das criadas aqui
+    //funcao para puxar as variaveis do outro scritpt como tambem declarar o valor das criadas aqui
     public void Inicializar(Vector3 dir, float vel, float vida)
     {
         direcao = dir;
@@ -35,24 +35,18 @@ public class MoviDirecionado : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= tempoVida)
         {
-            Destruir();
+            Destroy(gameObject);
         }
 
         
     }
 
-    //fun��o destruir o tiro depois de certo tempo
-    void Destruir()
-    {
-        Destroy(gameObject);
-    }
-
     //Refazer para ele destruir o alvo
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("limites") || other.CompareTag("inimigos"))
+        if (other.CompareTag("limites") /*|| other.CompareTag("inimigos")*/)
         {
-            Destruir();
+            Destroy(gameObject);
         }
     }
 }

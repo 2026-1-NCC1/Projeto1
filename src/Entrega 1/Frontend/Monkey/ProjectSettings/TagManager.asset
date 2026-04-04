@@ -9,7 +9,7 @@ TagManager:
   - limitesLaterais
   - ammo
   - alvos
-  - alvo
+  - projetil
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class SpawnerControler : MonoBehaviour
     
     void Update()
     {
-        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player e "gasta" uma bala
+        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player e diminui uma bala da variavel municao
         if (Input.GetMouseButtonDown(0) && (municaoScript.municao > 0))
         {
             Spawnar();
