@@ -4,11 +4,12 @@ public class alvo : MonoBehaviour
 {
     //public Text textoAlvos;
     public static int alvosAcertados = 0;
-    public int qtdAlvos = 2;
+    public int qtdAlvos = 3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        alvosAcertados = 0;
         //textoAlvos = GameObject.FindWithTag("textoAlvos").GetComponent<Text>();
     }
 

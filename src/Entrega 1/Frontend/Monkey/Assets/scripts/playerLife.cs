@@ -11,7 +11,7 @@ public class playerLife : MonoBehaviour
 
     void Update()
     {
-        if ((transform.position.y < -0.5f) && (dead == false))
+        if ((transform.position.y < -1.5f) && (dead == false))
         {
             Die();
         }
@@ -25,7 +25,7 @@ public class playerLife : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;

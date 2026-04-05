@@ -10,6 +10,7 @@ TagManager:
   - ammo
   - alvos
   - projetil
+  - fimFase
   layers:
   - Default
   - TransparentFX

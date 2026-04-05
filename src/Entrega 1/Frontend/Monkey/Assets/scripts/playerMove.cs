@@ -9,11 +9,12 @@ public class playerMove : MonoBehaviour
     public float jumpForce = 8f;
     public float aceleracao = 1f;
     public int contador = 0;
-    //[SerializeField] alvo scriptAlvo;
-    //public playerLife life;
+    [SerializeField] alvo scriptAlvo;
+    public playerLife life;
 
     void Start()
     {
+        alvo.alvosAcertados = 0;
         //variavel para pegar o rigidbody do player mais facilmente
         rb = GetComponent<Rigidbody>();
         
@@ -49,11 +50,11 @@ public class playerMove : MonoBehaviour
 
     }
 
-    /*private void OnTriggerEnter(Collider hit)
+    private void OnTriggerEnter(Collider hit)
     {
         if (hit.gameObject.tag == "fimFase" && alvo.alvosAcertados >= scriptAlvo.qtdAlvos)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);//colocar depois .buildIndex + 1);
 
         }
         else if (hit.gameObject.tag == "fimFase")
@@ -62,7 +63,7 @@ public class playerMove : MonoBehaviour
             life.Die();
         }
 
-    }*/
+    }
 }
 
 
