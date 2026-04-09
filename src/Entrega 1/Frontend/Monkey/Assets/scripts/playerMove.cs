@@ -59,7 +59,6 @@ public class playerMove : MonoBehaviour
         }
         else if (hit.gameObject.tag == "fimFase")
         {
-
             life.Die();
         }
 
