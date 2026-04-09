@@ -117,6 +117,7 @@ public class Program
         {
             return true;
         }
+        Console.WriteLine("[Rádio] Você desistiu..Bom, boa sorte para passar a noite!");
         return false;
     }
 
