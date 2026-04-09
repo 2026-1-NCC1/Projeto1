@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnerControler : MonoBehaviour
 {
-    //organizar varia1veis que serão controladas pelo inspector
+    //organizar varia1veis que serão controladas pelo inspector e puxa uma variavel de outro script
     [Header("Configurações")]
     public GameObject tiro;
     public float veloMovimento = 5f;
@@ -19,7 +19,8 @@ public class SpawnerControler : MonoBehaviour
     
     void Update()
     {
-        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player e diminui uma bala da variavel municao
+        //pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player e diminui uma bala da variavel municao 
+        //o comentario vai ser utilizado futuramente para mostrar a quantidade de municao que o jogador tem (feedback) 
         if (Input.GetMouseButtonDown(0) && (municaoScript.municao > 0))
         {
             Spawnar();

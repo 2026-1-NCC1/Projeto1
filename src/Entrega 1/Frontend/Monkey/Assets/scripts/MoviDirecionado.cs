@@ -27,7 +27,7 @@ public class MoviDirecionado : MonoBehaviour
     
     void Update()
     {
-        //quando iniciado ele come�a a contar a quano tempo o tiro esta em tela para destruir ele quando o tempo for maior que o timer
+        //quando iniciado ele comeca a contar a quano tempo o tiro esta em tela para destruir ele quando o tempo for maior que o timer
         if (!inicializado) return;
 
         transform.Translate(direcao * velocidade * Time.deltaTime, Space.World);
