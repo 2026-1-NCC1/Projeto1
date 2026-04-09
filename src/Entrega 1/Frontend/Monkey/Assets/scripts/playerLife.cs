@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class playerLife : MonoBehaviour
 {
     bool dead = false;
@@ -31,12 +32,11 @@ public class playerLife : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<playerMove>().enabled = false;
         dead = true;
-        Invoke(nameof(ReloadLevel), 0.8f);
-
+        Invoke(nameof(GameOver), 0.8f);
     }
 
-    void ReloadLevel()
+    void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOver");
     }
 }
