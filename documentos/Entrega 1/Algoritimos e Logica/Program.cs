@@ -41,6 +41,9 @@ public class Program
 
             [QUESTÃO 02]
             Quais são os respectivos valores de X e Y do Sistema de Equações abaixo?
+                {𝑥 + 𝑦 =  20
+                {2𝑥 − 𝑦 =  10
+                
                 [a] 𝑥 = 4, 𝑦 = 5
                 [b] 𝑥 = 3, 𝑦 = 2/5
                 [c] 𝑥 = 10, 𝑦 = 10
@@ -66,7 +69,7 @@ public class Program
             resposta = Console.ReadLine().ToLower();
             (pontos, erros) = AtualizarPontuacaoErros("b", resposta, pontos, erros);
 
-            Console.WriteLine($"Você acertou {pontos}/3");
+            Console.WriteLine($"Você conseguiu {pontos}/3");
 
             // se o jogador acertar tudo, ele ganha e o programa acaba
             if (pontos == 3)
@@ -115,9 +118,9 @@ public class Program
 
         if (input == "1")
         {
+            Console.WriteLine("[Rádio] Você desistiu..Bom, boa sorte para passar a noite!");
             return true;
         }
-        Console.WriteLine("[Rádio] Você desistiu..Bom, boa sorte para passar a noite!");
         return false;
     }
 
