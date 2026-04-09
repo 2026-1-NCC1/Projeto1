@@ -7,9 +7,9 @@ public class Program
     {
         Lore();
 
-        int energia = 10;
+        int energia = 3;
 
-        while (energia > 0)
+        while (true)
         {
             int pontos = 0;
             int erros = 0;
@@ -23,7 +23,7 @@ public class Program
             Console.WriteLine("""
 
             [QUESTÃO 01]
-            Quem foi a primeira pessoa a viajar no Espaço?
+            Quem foi a primeira pessoa a viajar ao Espaço?
                 [a] Yuri Gagarin
                 [b] A cadela Laika
                 [c] Neil Armstrong
@@ -68,6 +68,7 @@ public class Program
 
             Console.WriteLine($"Você acertou {pontos}/3");
 
+            // se o jogador acertar tudo, ele ganha e o programa acaba
             if (pontos == 3)
             {
                 Console.WriteLine("[Fantasma] Parabéns, você conseguiu...Pode sair");
@@ -76,6 +77,7 @@ public class Program
 
             energia -= erros;
 
+            // se a energia do jogador acabar, ele perde e o programa acaba
             if (energia <= 0)
             {
                 Console.WriteLine("Sua energia acabou...");
@@ -90,6 +92,7 @@ public class Program
         }
     }
 
+    // função para contabilizar pontos e erros do jogador
     public static (int, int) AtualizarPontuacaoErros(string respostaCerta, string respostaJogador, int pontos, int erros)
     {
         if (respostaJogador != respostaCerta)
@@ -104,6 +107,7 @@ public class Program
         return (pontos, erros);
     }
 
+    // função para verificar se o jogador deseja desistir
     public static bool Desitir()
     {
         Console.WriteLine("\nDeseja desistir?\n[1] Sim\nPressione qualquer outra tecla para continuar");
@@ -116,6 +120,7 @@ public class Program
         return false;
     }
 
+    // função para apresentar o contexto ao jogador
     public static void Lore()
     {
         Console.WriteLine("[Você] ZzzzZzzzz...");
@@ -130,7 +135,7 @@ public class Program
         Thread.Sleep(7000);
         Console.WriteLine($"[{nomeJogador}] E como que eu saio daqui?!");
         Thread.Sleep(2000);
-        Console.WriteLine($"[Rádio] Você tem que fazer uma prova, mas cuidado... A cada questão que você erra, ele suga pontos da sua energia vital, até você ficar sem.. Se você acertar tudo, ele te deixa sair. Você pode tentar quantas vezes quiser, mas cuidado para não deixar ele sugar todos os pontos da sua energia.");
+        Console.WriteLine($"[Rádio] Você tem que fazer uma prova, mas cuidado... A cada questão que você erra, ele suga pontos da sua energia vital até você ficar sem.. Se você acertar tudo, ele te deixa sair. Você pode tentar quantas vezes quiser, mas cuidado para não deixar ele sugar todos os pontos da sua energia.");
         Thread.Sleep(10000);
         Console.WriteLine($"[{nomeJogador}] E se eu não souber nada?!");
         Thread.Sleep(2000);
