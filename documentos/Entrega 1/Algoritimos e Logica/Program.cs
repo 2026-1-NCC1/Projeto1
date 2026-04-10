@@ -66,7 +66,7 @@ public class Program
             resposta = DefinirResposta();
             (pontos, erros) = AtualizarPontuacaoErros("b", resposta, pontos, erros);
 
-            Console.WriteLine($"Você conseguiu {pontos}/3");
+            Console.WriteLine($"\nVocê conseguiu {pontos}/3 pontos");
 
             // se o jogador acertar tudo, ele ganha e o programa acaba
             if (pontos == 3)
@@ -85,7 +85,6 @@ public class Program
             }
 
             Console.WriteLine($"""
-
             Você perdeu {erros} de energia
                 Energia: {energia}
             """);
@@ -149,9 +148,9 @@ public class Program
         Console.Write("\nDigite seu nome: ");
         string nomeJogador = Console.ReadLine();
 
-        while (string.IsNullOrWhiteSpace(nomeJogador) || nomeJogador.Any(char.IsDigit))
+        while (string.IsNullOrWhiteSpace(nomeJogador) || nomeJogador.Any(char.IsDigit) || nomeJogador.Any(char.IsPunctuation))
         {
-            Console.Write("O nome não pode ser vazio ou conter números!\nDigite seu nome novamente: ");
+            Console.Write("O nome não pode ser vazio, conter números ou pontuações!\nDigite seu nome novamente: ");
             nomeJogador = Console.ReadLine();
         }
 
