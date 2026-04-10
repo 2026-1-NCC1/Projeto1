@@ -7,7 +7,7 @@ public class Program
     {
         Lore();
 
-        int energia = 3;
+        int energia = 10;
 
         while (true)
         {
@@ -27,9 +27,8 @@ public class Program
                 [a] Yuri Gagarin
                 [b] A cadela Laika
                 [c] Neil Armstrong
-            Digite sua resposta:
             """);
-            string resposta = Console.ReadLine().ToLower();
+            string resposta = DefinirResposta();
             (pontos, erros) = AtualizarPontuacaoErros("a", resposta, pontos, erros);
             if (Desitir())
             {
@@ -47,9 +46,8 @@ public class Program
                 [a] 𝑥 = 4, 𝑦 = 5
                 [b] 𝑥 = 3, 𝑦 = 2/5
                 [c] 𝑥 = 10, 𝑦 = 10
-            Digite sua resposta:
             """);
-            resposta = Console.ReadLine().ToLower();
+            resposta = DefinirResposta();
             (pontos, erros) = AtualizarPontuacaoErros("c", resposta, pontos, erros);
             if (Desitir())
             {
@@ -64,9 +62,8 @@ public class Program
                 [a] 1 minuto
                 [b] 8 minutos
                 [c] 5 minutos
-            Digite sua resposta:
             """);
-            resposta = Console.ReadLine().ToLower();
+            resposta = DefinirResposta();
             (pontos, erros) = AtualizarPontuacaoErros("b", resposta, pontos, erros);
 
             Console.WriteLine($"Você conseguiu {pontos}/3");
@@ -128,21 +125,52 @@ public class Program
     public static void Lore()
     {
         Console.WriteLine("[Você] ZzzzZzzzz...");
-        Thread.Sleep(1000);
+        Console.ReadLine();
         Console.WriteLine("[Rádio] EII, ACORDA!");
-        Thread.Sleep(1000);
+        Console.ReadLine();
         Console.WriteLine("[Você] 👀");
-        Thread.Sleep(1000);
-        Console.Write("[Rádio] Parece que você dormiu no laboratório...Qual é o seu nome?\nDigite seu nome: ");
-        string nomeJogador = Console.ReadLine();
+        Console.ReadLine();
+        Console.Write("[Rádio] Parece que você dormiu no laboratório...Qual é o seu nome?");
+        string nomeJogador = DefinirNomeJogador();
         Console.WriteLine($"[Rádio] Certo, {nomeJogador}...Como você pode perceber já anoiteceu. Para o seu azar, esse laboratório é assombrado pelo fantasma de um professor que tinha muito apego por esse lugar há muuuuitos anos. Só ele pode deixar você sair daí..");
-        Thread.Sleep(7000);
+        Console.ReadLine();
         Console.WriteLine($"[{nomeJogador}] E como que eu saio daqui?!");
-        Thread.Sleep(2000);
+        Console.ReadLine();
         Console.WriteLine($"[Rádio] Você tem que fazer uma prova, mas cuidado... A cada questão que você erra, ele suga pontos da sua energia vital até você ficar sem.. Se você acertar tudo, ele te deixa sair. Você pode tentar quantas vezes quiser, mas cuidado para não deixar ele sugar todos os pontos da sua energia.");
-        Thread.Sleep(10000);
+        Console.ReadLine();
         Console.WriteLine($"[{nomeJogador}] E se eu não souber nada?!");
-        Thread.Sleep(2000);
+        Console.ReadLine();
         Console.WriteLine($"[Rádio] Você pode desistir a qualquer momento da prova ou nem faze-la, mas você terá que esperar amanhecer o dia para alguém destrancar o laboratório. Bom, eu não recomendo desistir, você não gostaria de passar a noite com um fantasma te rodeando, mas enfim você quem sabe...");
+    }
+
+    // função para validar e definir nome do jogador
+    public static string DefinirNomeJogador()
+    {
+        Console.Write("\nDigite seu nome: ");
+        string nomeJogador = Console.ReadLine();
+
+        while (string.IsNullOrWhiteSpace(nomeJogador) || nomeJogador.Any(char.IsDigit))
+        {
+            Console.Write("O nome não pode ser vazio ou conter números!\nDigite seu nome novamente: ");
+            nomeJogador = Console.ReadLine();
+        }
+
+        return nomeJogador;
+    }
+
+    // função para validar e definir a resposta
+    public static string DefinirResposta()
+    {
+        Console.Write("Escolha entre a, b ou c.\nDigite sua resposta: ");
+        string resposta = Console.ReadLine().ToLower();
+
+        string[] alternativasValidas = { "a", "b", "c" };
+        while (!alternativasValidas.Contains(resposta))
+        {
+            Console.Write("\nResposta inválida! Escolha entre a, b ou c: ");
+            resposta = Console.ReadLine().ToLower();
+        }
+
+        return resposta;
     }
 }
