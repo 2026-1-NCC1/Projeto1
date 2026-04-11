@@ -31,7 +31,7 @@ public class playerMove : MonoBehaviour
         //no momento da queda do pulo, a gravidade é aumentada para o player cair mais rápido, dando uma sensacao melhor de queda
         if (rb.linearVelocity.y < 0){
 
-            Physics.gravity = new Vector3(0, -16.0F, 0);
+            Physics.gravity = new Vector3(0, -19.0F, 0);
 
         }
         //pega o input do teclado para pular, e toda vez que ele pula a gravidade volta ao normal durante a subida
