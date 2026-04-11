@@ -4,13 +4,9 @@ using UnityEngine.UI;
 public class Municao : MonoBehaviour
 
 {
-    //[SerializeField] Text textoMunicao;
+    //variavel para mostrar a quantidade de municao que o jogador tem (feedback), e a variavel municao é a quantidade de municao que o jogador tem
+    [SerializeField] Text textoMunicao;
     public int municao = 3;
-
-    void Update()
-    {
-
-    }
 
     //caso passe pela caixa de munição, o jogador coleta a munição e o texto é atualizado
     private void OnTriggerEnter(Collider hit)
@@ -21,14 +17,15 @@ public class Municao : MonoBehaviour
         {
             Destroy(hit.gameObject);
             municao = 3;
-            //atualizarMunicao();
+            atualizarMunicao();
 
         }
 
     }
-    /*public void atualizarMunicao()
+    //metodo que atualiza o texto da municao (feedback para o jogador), o metodo foi criado pois é reutilizado em outro script
+    public void atualizarMunicao()
     {
         textoMunicao.text = "Munição:" + municao;
-    }*/
+    }
 }
 

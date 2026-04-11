@@ -35,14 +35,6 @@ public class MoviDirecionado : MonoBehaviour
         
     }
 
-    //Refazer para ele destruir o alvo
-    /*void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("limites") || other.CompareTag("obstaculos"))
-        {
-            Destroy(gameObject);
-        }
-    }*/
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag=="limites" || collision.gameObject.tag=="obstaculos" || collision.gameObject.tag=="fimFase")

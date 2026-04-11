@@ -2,29 +2,27 @@ using UnityEngine;
 using UnityEngine.UI;
 public class alvo : MonoBehaviour
 {
-    //public Text textoAlvos;
+    //declaracao de variaveis do texto que vai ser usado para feedback de alvos acertados, a quantidade de alvos acertados e a quantidade total de alvos na fase
+    public Text textoAlvos;
     public static int alvosAcertados = 0;
-    public int qtdAlvos = 3;
+    public static int qtdAlvos = 3;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //metodo que inicia a quantidade de alvos acertados em 0 e o pega o componente de texto que mostrara a quantidade de alvos acertados na tela.
     void Start()
     {
         alvosAcertados = 0;
-        //textoAlvos = GameObject.FindWithTag("textoAlvos").GetComponent<Text>();
+        textoAlvos = GameObject.FindWithTag("textoAlvos").GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
+    //metodo que detecta a colisao do projetil com o alvo, incrementa a quantidade de alvos acertados e destroi o alvo
     private void OnTriggerEnter(Collider hit)
     {
         if (hit.gameObject.tag == "projetil")
         {
             alvosAcertados++;
             Destroy(gameObject);
-            //textoAlvos.text = "Alvos:" + alvosAcertados;
+            textoAlvos.text = "Alvos:" + alvosAcertados;
         }
     }
 }
