@@ -1,4 +1,3 @@
-using Unity.Android.Gradle.Manifest;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -58,8 +57,7 @@ public class playerMove : MonoBehaviour
             rb.linearVelocity = new Vector3(horizontalInput * moveSpeed, rb.linearVelocity.y, rb.linearVelocity.z);
         }
     }
-
-    private void OnTriggerEnter(Collider hit)
+    private void OnCollisionEnter(Collision hit)
     {
         if (hit.gameObject.tag == "fimFase" && alvo.alvosAcertados >= scriptAlvo.qtdAlvos)
         {
@@ -70,7 +68,6 @@ public class playerMove : MonoBehaviour
         {
             life.Die();
         }
-
     }
 
 

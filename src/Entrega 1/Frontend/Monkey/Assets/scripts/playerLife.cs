@@ -18,9 +18,16 @@ public class playerLife : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider hit)
+   /* private void OnTriggerEnter(Collider hit)
     {
-        if ((hit.gameObject.tag == "obstaculos") || hit.gameObject.tag == "limites" || hit.gameObject.tag == "alvos")
+        if ((hit.gameObject.tag == "obstaculos") || hit.gameObject.tag == "limites")
+        {
+            Die();
+        }
+    }*/
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites")
         {
             Die();
         }
