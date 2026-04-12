@@ -18,12 +18,6 @@ public class MoviDirecionado : MonoBehaviour
         timer = 0f;
         inicializado = true;
     }
-    // start vazio novamente porque usar� apenas o trigger do click para funcionar
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
@@ -41,10 +35,9 @@ public class MoviDirecionado : MonoBehaviour
         
     }
 
-    //Refazer para ele destruir o alvo
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("limites") /*|| other.CompareTag("inimigos")*/)
+        if (collision.gameObject.tag=="limites" || collision.gameObject.tag=="obstaculos" || collision.gameObject.tag=="fimFase")
         {
             Destroy(gameObject);
         }
