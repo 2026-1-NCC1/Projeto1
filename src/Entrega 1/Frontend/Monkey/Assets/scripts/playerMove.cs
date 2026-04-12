@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class playerMove : MonoBehaviour
 {
-    //declaracao de variaveis do rigidbody do player, a velocidade de movimento, a força do pulo, a velocida maxima do player
+    //declaracao de variaveis do rigidbody do player, a velocidade de movimento, a forï¿½a do pulo, a velocida maxima do player
     //o script do alvo para verificar a quantidade de alvos acertados e a vida do player para chamar o metodo de morte de outro script
     //os pontos do jogador, e o texto para mostrar os pontos (feedback)
 
@@ -28,7 +28,7 @@ public class playerMove : MonoBehaviour
     void Update()
     {
 
-        //no momento da queda do pulo, a gravidade é aumentada para o player cair mais rápido, dando uma sensacao melhor de queda
+        //no momento da queda do pulo, a gravidade ï¿½ aumentada para o player cair mais rï¿½pido, dando uma sensacao melhor de queda
         if (rb.linearVelocity.y < 0){
 
             Physics.gravity = new Vector3(0, -19.0F, 0);
@@ -55,7 +55,7 @@ public class playerMove : MonoBehaviour
         }
 
         //variavel aceleracao para aumentar a velocidade do player constantemente, de acordo com o tempo para ser gradual e para o player conseguir se adaptar
-        aceleracao += 0.01f * Time.deltaTime;
+        aceleracao += 0.005f * Time.deltaTime;
     }
 
     //metodo que detecta a colisao do player com o fim da fase, e verifica se o player acertou a quantidade de alvos necessaria para passar de fase,

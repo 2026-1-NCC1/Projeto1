@@ -8,8 +8,9 @@ public class MoviDirecionado : MonoBehaviour
     private float tempoVida;
     private float timer;
     private bool inicializado = false;
+    private Transform alvo;  
 
-    //funcao para puxar as variaveis do outro scritpt como tambem declarar o valor das criadas aqui
+    //métodos para puxar as variaveis do outro scritpt como tambem declarar o valor das criadas aqui
     public void Inicializar(Vector3 dir, float vel, float vida)
     {
         direcao = dir;
@@ -17,22 +18,48 @@ public class MoviDirecionado : MonoBehaviour
         tempoVida = vida;
         timer = 0f;
         inicializado = true;
+        alvo = null;
     }
     
+    // Método 
+    public void InicializarSeguir(Transform inimigo, float vel, float vida)
+    {
+        alvo = inimigo;
+        velocidade = vel;
+        tempoVida = vida;
+        timer = 0f;
+        inicializado = true;
+    }
+
     void Update()
     {
-        //quando iniciado ele come�a a contar a quano tempo o tiro esta em tela para destruir ele quando o tempo for maior que o timer
         if (!inicializado) return;
 
-        transform.Translate(direcao * velocidade * Time.deltaTime, Space.World);
-
+        // quando iniciado ele verifica se alvo diferente de nulo
+        if (alvo != null)
+        {
+            // Verifica se o alvo ainda existe
+            if (alvo.gameObject == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
+            // Move em direção ao alvo (atualizado a cada frame)
+            Vector3 direcaoAlvo = (alvo.position - transform.position).normalized;
+            transform.Translate(direcaoAlvo * velocidade * Time.deltaTime, Space.World);
+        }
+        // //quando iniciado e alvo é igual a nulo ele segue um movimento reto 
+        else
+        {
+            transform.Translate(direcao * velocidade * Time.deltaTime, Space.World);
+        }
+        //conta o tempo para sumir do mapa
         timer += Time.deltaTime;
         if (timer >= tempoVida)
         {
             Destroy(gameObject);
         }
-
-        
     }
 
     private void OnCollisionEnter(Collision collision)
