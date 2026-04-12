@@ -22,25 +22,53 @@ public class SpawnerControler : MonoBehaviour
             municaoScript.atualizarMunicao();
         }
     }
-    
-    // função para spawnar o tiro uma posição na frente do player e direcionar o tiro para a posição do click
+
+    // funcao para spawnar o tiro uma posicao na frente do player e direcionar o tiro para a posicao do click
     void Spawnar()
     {
-       //pega o raio da câmera e a posição do player +1 para o tiro sempre sair do player
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Vector3 posicaoPlayer = player.transform.position + new Vector3(0,0,1);
+        Vector3 posicaoPlayer = player.transform.position + new Vector3(0, 0, 1);
 
-        //quando o raio colidir com algo ele pega a posição do click ele atira e cria um novo objeto sapawnado que some no tempo determinado
+        ////quando o raio colidir com algo ele pega a posição do click ele atira e cria um novo objeto sapawnado que some no tempo determinado
         if (Physics.Raycast(raio, out hit))
         {
-            Vector3 posicaoClique = hit.point;
-            Vector3 posicaoSpawn = posicaoPlayer;
-            GameObject novoObjeto = Instantiate(tiro, posicaoSpawn, Quaternion.identity);
-            Vector3 direcao = (posicaoClique - posicaoSpawn).normalized;
+            //verifica se acerto o trigger do alvo
+            if (hit.collider.CompareTag("alvos"))
+            {
+                // Cria o tiro
+                GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
+                
+                //pega o componente do movimento direcionado do tiro no outro scrpit
+                MoviDirecionado movimento = novoTiro.GetComponent<MoviDirecionado>();
+                
+                if (movimento == null)
+                {
+                    movimento = novoTiro.AddComponent<MoviDirecionado>();
+                }
+                
+                // Inicializa com o movimento da funcao InicializarSeguir
+                movimento.InicializarSeguir(hit.collider.transform, veloMovimento, tempoVida);
+                
+                Debug.Log("TIRO SEGUE: " + hit.collider.name);
+            }
+            else
+            {
+                // Tiro normal sem o trigger do alvo
+                Vector3 posicaoClique = hit.point;
+                Vector3 posicaoSpawn = posicaoPlayer;
+                GameObject novoTiro = Instantiate(tiro, posicaoSpawn, Quaternion.identity);
+                Vector3 direcao = (posicaoClique - posicaoSpawn).normalized;
 
-            MoviDirecionado movimento = novoObjeto.AddComponent<MoviDirecionado>();
-            movimento.Inicializar(direcao, veloMovimento, tempoVida);
+                MoviDirecionado movimento = novoTiro.GetComponent<MoviDirecionado>();
+                if (movimento == null)
+                {
+                    movimento = novoTiro.AddComponent<MoviDirecionado>();
+                }
+                
+                movimento.Inicializar(direcao, veloMovimento, tempoVida);
+                Debug.Log("TIRO RETO");
+            }
         }
     }
 }
