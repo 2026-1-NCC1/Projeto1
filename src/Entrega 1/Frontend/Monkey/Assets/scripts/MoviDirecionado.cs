@@ -10,7 +10,7 @@ public class MoviDirecionado : MonoBehaviour
     private bool inicializado = false;
     private Transform alvo;  
 
-    //métodos para puxar as variaveis do outro scritpt como tambem declarar o valor das criadas aqui
+    //metodos para puxar as variaveis do outro scritpt como tambem declarar o valor das criadas aqui
     public void Inicializar(Vector3 dir, float vel, float vida)
     {
         direcao = dir;
@@ -21,7 +21,7 @@ public class MoviDirecionado : MonoBehaviour
         alvo = null;
     }
     
-    // Método 
+    // Metodo 
     public void InicializarSeguir(Transform inimigo, float vel, float vida)
     {
         alvo = inimigo;
@@ -45,11 +45,11 @@ public class MoviDirecionado : MonoBehaviour
                 return;
             }
             
-            // Move em direção ao alvo (atualizado a cada frame)
+            // Move em direcao ao alvo (atualizado a cada frame)
             Vector3 direcaoAlvo = (alvo.position - transform.position).normalized;
             transform.Translate(direcaoAlvo * velocidade * Time.deltaTime, Space.World);
         }
-        // //quando iniciado e alvo é igual a nulo ele segue um movimento reto 
+        // //quando iniciado e alvo = a nulo ele segue um movimento reto 
         else
         {
             transform.Translate(direcao * velocidade * Time.deltaTime, Space.World);

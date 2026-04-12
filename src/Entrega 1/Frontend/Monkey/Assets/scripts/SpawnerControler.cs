@@ -23,7 +23,7 @@ public class SpawnerControler : MonoBehaviour
         }
     }
 
-    // função para spawnar o tiro uma posição na frente do player e direcionar o tiro para a posição do click
+    // funcao para spawnar o tiro uma posicao na frente do player e direcionar o tiro para a posicao do click
     void Spawnar()
     {
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -47,7 +47,7 @@ public class SpawnerControler : MonoBehaviour
                     movimento = novoTiro.AddComponent<MoviDirecionado>();
                 }
                 
-                // Inicializa com o movimento da função InicializarSeguir
+                // Inicializa com o movimento da funcao InicializarSeguir
                 movimento.InicializarSeguir(hit.collider.transform, veloMovimento, tempoVida);
                 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
