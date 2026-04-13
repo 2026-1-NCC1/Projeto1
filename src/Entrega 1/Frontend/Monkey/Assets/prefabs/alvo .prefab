@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7313293556836084114}
   - component: {fileID: -4849135323334442568}
   - component: {fileID: -3570578970324254250}
+  - component: {fileID: 4748429172908317468}
   m_Layer: 0
   m_Name: 'alvo '
   m_TagString: Untagged
@@ -104,11 +105,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-4849135323334442568
 Rigidbody:
@@ -150,3 +151,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qtdAlvos: 3
+--- !u!135 &4748429172908317468
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627160141094912426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0, z: 0}

@@ -11,6 +11,7 @@ TagManager:
   - alvos
   - projetil
   - fimFase
+  - textoAlvos
   layers:
   - Default
   - TransparentFX
