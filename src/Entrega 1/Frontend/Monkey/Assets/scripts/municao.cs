@@ -6,7 +6,9 @@ public class Municao : MonoBehaviour
 {
     //variavel para mostrar a quantidade de municao que o jogador tem (feedback), e a variavel municao é a quantidade de municao que o jogador tem
     [SerializeField] Text textoMunicao;
-    public int municao = 3;
+    public int municao = 6;
+    int qtdMaxMunicao = 6;
+    int qtdRecarga = 3;
 
     //caso passe pela caixa de munição, o jogador coleta a munição e o texto é atualizado
     private void OnTriggerEnter(Collider hit)
@@ -16,7 +18,19 @@ public class Municao : MonoBehaviour
 
         {
             Destroy(hit.gameObject);
-            municao = 3;
+
+            // Estrutura condicional para não deixar o player utrapassar a quantidade máxima de munição
+            if (municao < qtdMaxMunicao)
+            {
+                if(municao + qtdRecarga < qtdMaxMunicao)
+                {
+                    municao += qtdRecarga;
+                }
+                else
+                {
+                    municao = qtdMaxMunicao;
+                }
+            }
             atualizarMunicao();
 
         }

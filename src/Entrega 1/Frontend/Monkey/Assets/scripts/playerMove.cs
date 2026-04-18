@@ -16,12 +16,14 @@ public class playerMove : MonoBehaviour
     public float velocidadeMaxima = 15f;
     [SerializeField] alvo scriptAlvo;
     public playerLife life;
+    public static int pontos = 0;
     
 
     //metodo que inicia a quantidade de alvos acertados em 0, pega o componente de rigidbody do player para facilitar a escrita depois
     void Start()
     {
         alvo.alvosAcertados = 0;
+        pontos = 0;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -71,6 +73,7 @@ public class playerMove : MonoBehaviour
         else if (hit.gameObject.tag == "fimFase")
         {
             life.Die();
+            //chegou no final da fase mas n acertou todos os alvos 
         }
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
-public class GameOver : MonoBehaviour
+public class gameOver : MonoBehaviour
 {
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,6 +20,6 @@ public class GameOver : MonoBehaviour
     // botão para o usuário tentar a fase novamente
     public void TentarNovamente()
     {
-        SceneManager.LoadScene("Nivel01"); // mudar depois para ir para a fase anterior
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1); // mudar depois para ir para a fase anterior
     }
 }
