@@ -31,7 +31,7 @@ public class playerMove : MonoBehaviour
     {
 
         //no momento da queda do pulo, a gravidade � aumentada para o player cair mais r�pido, dando uma sensacao melhor de queda
-        if (rb.linearVelocity.y < 0){
+        if (rb.linearVelocity.y <= 0){
 
             Physics.gravity = new Vector3(0, -19.0F, 0);
 

@@ -2798,7 +2798,6 @@ MonoBehaviour:
   velocidadeMaxima: 15
   scriptAlvo: {fileID: -3570578970324254250, guid: ecad455301f27a34c91add2b08f53cfc, type: 3}
   life: {fileID: 1820798640}
-  pontos: 0
 --- !u!54 &1820798635
 Rigidbody:
   m_ObjectHideFlags: 0

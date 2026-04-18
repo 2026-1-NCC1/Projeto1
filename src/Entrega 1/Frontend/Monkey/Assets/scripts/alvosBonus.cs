@@ -3,7 +3,6 @@ using UnityEngine.UI;
 public class alvosBonus : MonoBehaviour
 {
     public Text textoAlvosBonus;
-    public playerMove scriptPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
