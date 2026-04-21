@@ -21,6 +21,7 @@ public class playerLife : MonoBehaviour
         if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites")
         {
             Die();
+            //string pro game over bateu em algum desses
         }
     }
 

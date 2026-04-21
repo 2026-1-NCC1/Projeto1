@@ -4,28 +4,43 @@ using UnityEngine.UI;
 public class Municao : MonoBehaviour
 
 {
-    //variavel para mostrar a quantidade de municao que o jogador tem (feedback), e a variavel municao È a quantidade de municao que o jogador tem
+    //variavel para mostrar a quantidade de municao que o jogador tem (feedback), e a variavel municao √© a quantidade de municao que o jogador tem
     [SerializeField] Text textoMunicao;
-    public int municao = 3;
+    public int municao = 6;
+    int qtdMaxMunicao = 6;
+    int qtdRecarga = 3;
 
-    //caso passe pela caixa de muniÁ„o, o jogador coleta a muniÁ„o e o texto È atualizado
+    //caso passe pela caixa de muni√ß√£o, o jogador coleta a muni√ß√£o e o texto √© atualizado
     private void OnTriggerEnter(Collider hit)
     {
-        //verifica se bateu na caixa de muniÁ„o, se sim coleta a muniÁ„o e mostra isso pro jogador
+        //verifica se bateu na caixa de muni√ß√£o, se sim coleta a muni√ß√£o e mostra isso pro jogador
         if (hit.gameObject.tag == "ammo")
 
         {
             Destroy(hit.gameObject);
-            municao = 3;
+
+            // Estrutura condicional para n√£o deixar o player utrapassar a quantidade m√°xima de muni√ß√£o
+//testar sem esse primeiro if
+            if (municao < qtdMaxMunicao)
+            {
+                if(municao + qtdRecarga < qtdMaxMunicao)
+                {
+                    municao += qtdRecarga;
+                }
+                else
+                {
+                    municao = qtdMaxMunicao;
+                }
+            }
             atualizarMunicao();
 
         }
 
     }
-    //metodo que atualiza o texto da municao (feedback para o jogador), o metodo foi criado pois È reutilizado em outro script
+    //metodo que atualiza o texto da municao (feedback para o jogador), o metodo foi criado pois √© reutilizado em outro script
     public void atualizarMunicao()
     {
-        textoMunicao.text = "MuniÁ„o:" + municao;
+        textoMunicao.text = "Muni√ß√£o:" + municao;
     }
 }
 

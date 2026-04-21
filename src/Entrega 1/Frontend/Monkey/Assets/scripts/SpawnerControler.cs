@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnerControler : MonoBehaviour
+public class spawnerControler : MonoBehaviour
 {
     //organizar variaveis que serão controladas pelo inspector
     [Header("Configurações")]
@@ -30,7 +30,7 @@ public class SpawnerControler : MonoBehaviour
         RaycastHit hit;
         Vector3 posicaoPlayer = player.transform.position + new Vector3(0, 0, 1);
 
-        ////quando o raio colidir com algo ele pega a posição do click ele atira e cria um novo objeto sapawnado que some no tempo determinado
+        ////quando o raio colidir com algo ele pega a posicao do click ele atira e cria um novo objeto sapawnado que some no tempo determinado
         if (Physics.Raycast(raio, out hit))
         {
             //verifica se acerto o trigger do alvo
@@ -38,18 +38,37 @@ public class SpawnerControler : MonoBehaviour
             {
                 // Cria o tiro
                 GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
-                
+
                 //pega o componente do movimento direcionado do tiro no outro scrpit
-                MoviDirecionado movimento = novoTiro.GetComponent<MoviDirecionado>();
-                
+                moviDirecionado movimento = novoTiro.GetComponent<moviDirecionado>();
+
                 if (movimento == null)
                 {
-                    movimento = novoTiro.AddComponent<MoviDirecionado>();
+                    movimento = novoTiro.AddComponent<moviDirecionado>();
                 }
-                
+
                 // Inicializa com o movimento da funcao InicializarSeguir
                 movimento.InicializarSeguir(hit.collider.transform, veloMovimento, tempoVida);
-                
+
+                Debug.Log("TIRO SEGUE: " + hit.collider.name);
+            }
+            //verifica se acerto o trigger do alvo bonus
+            else if (hit.collider.CompareTag("alvoBonus"))
+            {
+                // Cria o tiro
+                GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
+
+                //pega o componente do movimento direcionado do tiro no outro scrpit
+                moviDirecionado movimento = novoTiro.GetComponent<moviDirecionado>();
+
+                if (movimento == null)
+                {
+                    movimento = novoTiro.AddComponent<moviDirecionado>();
+                }
+
+                // Inicializa com o movimento da funcao InicializarSeguir
+                movimento.InicializarSeguir(hit.collider.transform, veloMovimento, tempoVida);
+
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
             }
             else
@@ -60,14 +79,15 @@ public class SpawnerControler : MonoBehaviour
                 GameObject novoTiro = Instantiate(tiro, posicaoSpawn, Quaternion.identity);
                 Vector3 direcao = (posicaoClique - posicaoSpawn).normalized;
 
-                MoviDirecionado movimento = novoTiro.GetComponent<MoviDirecionado>();
+                moviDirecionado movimento = novoTiro.GetComponent<moviDirecionado>();
                 if (movimento == null)
                 {
-                    movimento = novoTiro.AddComponent<MoviDirecionado>();
+                    movimento = novoTiro.AddComponent<moviDirecionado>();
+
+
+                    movimento.Inicializar(direcao, veloMovimento, tempoVida);
+                    Debug.Log("TIRO RETO");
                 }
-                
-                movimento.Inicializar(direcao, veloMovimento, tempoVida);
-                Debug.Log("TIRO RETO");
             }
         }
     }

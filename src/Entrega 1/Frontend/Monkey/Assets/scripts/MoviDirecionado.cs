@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoviDirecionado : MonoBehaviour
+public class moviDirecionado : MonoBehaviour
 {
     //listar as variaveis tanto do script SapwnerControler quanto as que foram criadas aqui
     private Vector3 direcao;

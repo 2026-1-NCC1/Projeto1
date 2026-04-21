@@ -16,12 +16,14 @@ public class playerMove : MonoBehaviour
     public float velocidadeMaxima = 15f;
     [SerializeField] alvo scriptAlvo;
     public playerLife life;
+    public static int pontos = 0;
     
 
     //metodo que inicia a quantidade de alvos acertados em 0, pega o componente de rigidbody do player para facilitar a escrita depois
     void Start()
     {
         alvo.alvosAcertados = 0;
+        pontos = 0;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -29,7 +31,7 @@ public class playerMove : MonoBehaviour
     {
 
         //no momento da queda do pulo, a gravidade � aumentada para o player cair mais r�pido, dando uma sensacao melhor de queda
-        if (rb.linearVelocity.y < 0){
+        if (rb.linearVelocity.y <= 0){
 
             Physics.gravity = new Vector3(0, -19.0F, 0);
 
@@ -71,6 +73,7 @@ public class playerMove : MonoBehaviour
         else if (hit.gameObject.tag == "fimFase")
         {
             life.Die();
+            //chegou no final da fase mas n acertou todos os alvos 
         }
     }
 
