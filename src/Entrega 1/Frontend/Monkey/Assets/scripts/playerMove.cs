@@ -17,18 +17,22 @@ public class playerMove : MonoBehaviour
     [SerializeField] alvo scriptAlvo;
     public playerLife life;
     public static int pontos = 0;
+  
     
 
     //metodo que inicia a quantidade de alvos acertados em 0, pega o componente de rigidbody do player para facilitar a escrita depois
     void Start()
     {
+       
         alvo.alvosAcertados = 0;
         pontos = 0;
         rb = GetComponent<Rigidbody>();
+        
     }
 
     void Update()
     {
+        
 
         //no momento da queda do pulo, a gravidade � aumentada para o player cair mais r�pido, dando uma sensacao melhor de queda
         if (rb.linearVelocity.y <= 0){
@@ -58,6 +62,7 @@ public class playerMove : MonoBehaviour
 
         //variavel aceleracao para aumentar a velocidade do player constantemente, de acordo com o tempo para ser gradual e para o player conseguir se adaptar
         aceleracao += 0.005f * Time.deltaTime;
+
     }
 
     //metodo que detecta a colisao do player com o fim da fase, e verifica se o player acertou a quantidade de alvos necessaria para passar de fase,
@@ -67,7 +72,7 @@ public class playerMove : MonoBehaviour
     {
         if (hit.gameObject.tag == "fimFase" && alvo.alvosAcertados >= alvo.qtdAlvos)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);//colocar depois .buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
 
         }
         else if (hit.gameObject.tag == "fimFase")
