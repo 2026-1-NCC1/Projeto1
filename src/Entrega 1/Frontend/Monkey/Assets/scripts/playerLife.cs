@@ -41,4 +41,11 @@ public class playerLife : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+    private void OnTriggerEnter(Collider hit)
+    {
+        if(hit.CompareTag("tiroInimigo"))
+        {
+            Die();
+        }
+    }
 }
