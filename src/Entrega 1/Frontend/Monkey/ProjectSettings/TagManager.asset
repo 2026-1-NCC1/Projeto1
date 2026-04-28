@@ -15,6 +15,7 @@ TagManager:
   - alvoBonus
   - inimigos
   - projetilInimigo
+  - Limites
   layers:
   - Default
   - TransparentFX
