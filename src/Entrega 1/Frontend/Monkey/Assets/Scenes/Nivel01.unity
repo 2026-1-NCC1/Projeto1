@@ -2849,6 +2849,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7624688824697170099, guid: 896e84c2d4eee0a498c95d071289d491, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1868739752}
+    - targetCorrespondingSourceObject: {fileID: 7624688824697170099, guid: 896e84c2d4eee0a498c95d071289d491, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1868739758}
   m_SourcePrefab: {fileID: 100100000, guid: 896e84c2d4eee0a498c95d071289d491, type: 3}
 --- !u!1 &1596416223
 GameObject:
@@ -2951,8 +2954,31 @@ MonoBehaviour:
   playerObj: {fileID: 1820798639}
   timer: 0.5
   tiroInimigo: {fileID: 7542452681473524605, guid: 105f014df45d47b41a279287d1198cf4, type: 3}
-  bulletSpeed: 40
+  bulletSpeed: 35
   playerFrente: 1
+--- !u!136 &1739218774
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739218755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999997
+  m_Height: 1.9999999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1781970509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,7 +3383,7 @@ MonoBehaviour:
   playerObj: {fileID: 1820798639}
   timer: 0.5
   tiroInimigo: {fileID: 7542452681473524605, guid: 105f014df45d47b41a279287d1198cf4, type: 3}
-  bulletSpeed: 40
+  bulletSpeed: 35
   playerFrente: 1
 --- !u!54 &1868739753
 Rigidbody:
@@ -3398,6 +3424,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77bac1df3802a6c499173a7f425cc52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1868739758
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868739750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999997
+  m_Height: 1.9999999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2015603301
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,6 +4085,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1781970510}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7624688824697170099, guid: 896e84c2d4eee0a498c95d071289d491, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1739218774}
     - targetCorrespondingSourceObject: {fileID: 7624688824697170099, guid: 896e84c2d4eee0a498c95d071289d491, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1739218760}
