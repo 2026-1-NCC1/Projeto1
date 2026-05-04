@@ -18,7 +18,7 @@ public class playerLife : MonoBehaviour
     //metodo que verifica se o jogador colidiu com um obstaculo, limite ou alvo, caso tenha chama o metodo de morte
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites" || collision.gameObject.tag == "inimigos")
+        if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites")
         {
             Die();
             //string pro game over bateu em algum desses
@@ -40,12 +40,5 @@ public class playerLife : MonoBehaviour
     void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-    }
-    private void OnTriggerEnter(Collider hit)
-    {
-        if(hit.gameObject.tag == "projetilInimigo")
-        {
-            Die();
-        }
     }
 }
