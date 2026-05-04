@@ -8,6 +8,6 @@ public class mostrarPontosAdquiridos : MonoBehaviour
     //mostra quantos alvos o jogador acertou, na tela de game over
     void Start()
     {
-        textoPontos.text = "Você conseguiu: " + playerMove.pontos  + " pontos";
+        textoPontos.text = "Você conseguiu " + playerMove.pontos  + " pontos";
     }
 }

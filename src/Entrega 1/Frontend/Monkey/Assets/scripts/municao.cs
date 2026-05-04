@@ -19,16 +19,19 @@ public class Municao : MonoBehaviour
         {
             Destroy(hit.gameObject);
 
-        // Estrutura condicional para não deixar o player utrapassar a quantidade máxima de munição 
-            if(municao + qtdRecarga < qtdMaxMunicao)
+            // Estrutura condicional para não deixar o player utrapassar a quantidade máxima de munição
+//testar sem esse primeiro if
+            if (municao < qtdMaxMunicao)
             {
-                municao += qtdRecarga;
+                if(municao + qtdRecarga < qtdMaxMunicao)
+                {
+                    municao += qtdRecarga;
+                }
+                else
+                {
+                    municao = qtdMaxMunicao;
+                }
             }
-            else
-            {
-                municao = qtdMaxMunicao;
-            }
-            
             atualizarMunicao();
 
         }

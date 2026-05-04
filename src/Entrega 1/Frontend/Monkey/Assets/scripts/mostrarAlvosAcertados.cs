@@ -8,6 +8,6 @@ public class mostrarAlvosAcertados : MonoBehaviour
     //mostra quantos alvos o jogador acertou, na tela de game over
     void Start()
     {
-        textoAlvos.text = "Você acertou " + spawnerControler.alvosAcertados + "/" + spawnerControler.qtdAlvos + " alvos";
+        textoAlvos.text = "Você acertou " + alvo.alvosAcertados + "/" + alvo.qtdAlvos + " alvos";
     }
 }
