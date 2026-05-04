@@ -496,8 +496,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488886046}
-        m_TargetAssemblyTypeName: gameOver, Assembly-CSharp
+      - m_Target: {fileID: 688700565}
+        m_TargetAssemblyTypeName: botoes, Assembly-CSharp
         m_MethodName: TentarNovamente
         m_Mode: 1
         m_Arguments:
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 688700560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786f61a97ca90e74b8ea097322be27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 461a9f262c209cb4291cb725c398d51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &712173912
