@@ -1243,6 +1243,7 @@ MonoBehaviour:
   tempoVida: 4
   player: {fileID: 1820798633}
   municaoScript: {fileID: 1820798641}
+  textoPontos: {fileID: 901463508}
 --- !u!4 &560487100
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,9 +1337,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2015603302}
     m_Modifications:
+    - target: {fileID: 854856831555035004, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_Name
       value: tanque (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_TagString
@@ -1412,9 +1421,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2015603302}
     m_Modifications:
+    - target: {fileID: 157426299514472699, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_Name
       value: barril (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_TagString
@@ -1471,6 +1488,14 @@ PrefabInstance:
     - target: {fileID: 1801646093953980991, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636339603351416955, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944929475864542462, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1674,7 +1699,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 627160141094912426, guid: ecad455301f27a34c91add2b08f53cfc, type: 3}
-      insertIndex: 5
+      insertIndex: -1
       addedObject: {fileID: 923500221}
   m_SourcePrefab: {fileID: 100100000, guid: ecad455301f27a34c91add2b08f53cfc, type: 3}
 --- !u!1 &745331350
@@ -2087,6 +2112,10 @@ PrefabInstance:
       value: pipe (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_TagString
       value: obstaculos
       objectReference: {fileID: 0}
@@ -2280,6 +2309,10 @@ PrefabInstance:
       value: pipe
       objectReference: {fileID: 0}
     - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_TagString
       value: obstaculos
       objectReference: {fileID: 0}
@@ -2326,6 +2359,10 @@ PrefabInstance:
     - target: {fileID: 4000014211504346, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 23000011574071168, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3074,9 +3111,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2015603302}
     m_Modifications:
+    - target: {fileID: 157426299514472699, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_Name
       value: barril
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_TagString
@@ -3133,6 +3178,18 @@ PrefabInstance:
     - target: {fileID: 1801646093953980991, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636339603351416955, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944929475864542462, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870984754462092622, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3224,7 +3281,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 627160141094912426, guid: ecad455301f27a34c91add2b08f53cfc, type: 3}
-      insertIndex: 5
+      insertIndex: -1
       addedObject: {fileID: 1819966393}
   m_SourcePrefab: {fileID: 100100000, guid: ecad455301f27a34c91add2b08f53cfc, type: 3}
 --- !u!1 &1423191924
@@ -3319,6 +3376,10 @@ PrefabInstance:
       value: pipe (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_TagString
       value: obstaculos
       objectReference: {fileID: 0}
@@ -3382,9 +3443,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2015603302}
     m_Modifications:
+    - target: {fileID: 157426299514472699, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_Name
       value: barril (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_TagString
@@ -3442,6 +3511,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3636339603351416955, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944929475864542462, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870984754462092622, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3461,6 +3542,10 @@ PrefabInstance:
     - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_Name
       value: pipe (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000013483694438, guid: 51b9e2639774c80489c8dfd478f275f3, type: 3}
       propertyPath: m_TagString
@@ -3671,9 +3756,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2015603302}
     m_Modifications:
+    - target: {fileID: 157426299514472699, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_Name
       value: barril (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1318265234995576965, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_TagString
@@ -3730,6 +3823,14 @@ PrefabInstance:
     - target: {fileID: 1801646093953980991, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636339603351416955, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944929475864542462, guid: e6335f118c6b6664f829e1b5afe7e59f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3980,6 +4081,10 @@ PrefabInstance:
       value: tanque
       objectReference: {fileID: 0}
     - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_TagString
       value: obstaculos
       objectReference: {fileID: 0}
@@ -4224,6 +4329,10 @@ PrefabInstance:
     - target: {fileID: 1000010945466876, guid: 34fe31d9f2f45304bb8ab727c830e095, type: 3}
       propertyPath: m_Name
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010945466876, guid: 34fe31d9f2f45304bb8ab727c830e095, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000010945466876, guid: 34fe31d9f2f45304bb8ab727c830e095, type: 3}
       propertyPath: m_TagString
@@ -4878,9 +4987,9 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 960751709}
-  - {fileID: 1820798639}
   - {fileID: 497212318}
   - {fileID: 560487100}
   - {fileID: 154874823}
   - {fileID: 40433741}
   - {fileID: 745331353}
+  - {fileID: 1820798639}

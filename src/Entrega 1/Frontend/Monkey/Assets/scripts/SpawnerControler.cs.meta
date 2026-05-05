@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: 320ff51a09b6b492088cb6c28554da40
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tiro: {instanceID: 0}
+  - player: {instanceID: 0}
+  - municaoScript: {instanceID: 0}
+  - textoPontos: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

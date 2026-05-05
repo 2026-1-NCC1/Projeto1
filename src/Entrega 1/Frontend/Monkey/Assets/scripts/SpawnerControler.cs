@@ -11,7 +11,7 @@ public class spawnerControler : MonoBehaviour
     public GameObject player;
     [SerializeField] Municao municaoScript;
 
-    /*Text textoAlvos;
+    Text textoAlvos;
     public Text textoPontos;
     public static int alvosAcertados = 0;
     public static int qtdAlvos = 3;
@@ -20,7 +20,7 @@ public class spawnerControler : MonoBehaviour
     {
         alvosAcertados = 0;
         textoAlvos = GameObject.FindWithTag("textoAlvos").GetComponent<Text>();
-    }*/
+    }
 
 
     void Update()
@@ -65,10 +65,10 @@ public class spawnerControler : MonoBehaviour
 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
 
-                /*alvosAcertados++;
+                alvosAcertados++;
                 textoAlvos.text = "Alvos:" + alvosAcertados;
                 playerMove.pontos += 5;
-                textoPontos.text = "Pontos:" + playerMove.pontos;*/
+                textoPontos.text = "Pontos:" + playerMove.pontos;
             }
             //verifica se acerto o trigger do alvo bonus
             else if (hit.collider.CompareTag("alvoBonus"))
@@ -89,8 +89,29 @@ public class spawnerControler : MonoBehaviour
 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
 
-                /*playerMove.pontos += 10;
-                textoPontos.text = "Pontos:" + playerMove.pontos;*/
+                playerMove.pontos += 10;
+                textoPontos.text = "Pontos:" + playerMove.pontos;
+            }
+            else if (hit.collider.CompareTag("inimigos"))
+            {
+                // Cria o tiro
+                GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
+
+                //pega o componente do movimento direcionado do tiro no outro scrpit
+                moviDirecionado movimento = novoTiro.GetComponent<moviDirecionado>();
+
+                if (movimento == null)
+                {
+                    movimento = novoTiro.AddComponent<moviDirecionado>();
+                }
+
+                // Inicializa com o movimento da funcao InicializarSeguir
+                movimento.InicializarSeguir(hit.collider.transform, veloMovimento, tempoVida);
+
+                Debug.Log("TIRO SEGUE: " + hit.collider.name);
+
+                playerMove.pontos += 15;
+                textoPontos.text = "Pontos:" + playerMove.pontos;
             }
             else
             {
