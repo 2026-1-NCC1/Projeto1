@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class destruirObjetos : MonoBehaviour
+public class destruirObjetosTiro : MonoBehaviour
 {
     private void OnTriggerEnter(Collider hit)
     {
