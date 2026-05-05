@@ -14,7 +14,7 @@ public class playerMove : MonoBehaviour
     public float jumpForce = 7f;
     public float aceleracao = 0.01f;
     public float velocidadeMaxima = 15f;
-    [SerializeField] spawnerControler scriptAlvo;
+    [SerializeField] alvo scriptAlvo;
     public playerLife life;
     public static int pontos = 0;
     
@@ -22,7 +22,7 @@ public class playerMove : MonoBehaviour
     //metodo que inicia a quantidade de alvos acertados em 0, pega o componente de rigidbody do player para facilitar a escrita depois
     void Start()
     {
-        spawnerControler.alvosAcertados = 0;
+        alvo.alvosAcertados = 0;
         pontos = 0;
         rb = GetComponent<Rigidbody>();
     }
@@ -65,7 +65,7 @@ public class playerMove : MonoBehaviour
     //o metodo de morte do jogador
     private void OnCollisionEnter(Collision hit)
     {
-        if (hit.gameObject.tag == "fimFase" && spawnerControler.alvosAcertados >= spawnerControler.qtdAlvos)
+        if (hit.gameObject.tag == "fimFase" && alvo.alvosAcertados >= alvo.qtdAlvos)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);//colocar depois .buildIndex + 1);
 
