@@ -13,8 +13,7 @@ TagManager:
   - fimFase
   - textoAlvos
   - alvoBonus
-  - tiroInimigo
-  - inimigo
+  - inimigos
   layers:
   - Default
   - TransparentFX
