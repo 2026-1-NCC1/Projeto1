@@ -5,7 +5,7 @@ public class rotateBanana : MonoBehaviour
     //variaveis para controlar a velocidade de rotacao da caixa de municao
     float speedX;
     float speedY;
-    float speedZ=5f;
+    float speedZ = 5f;
 
     //faz a rotacao da caixa de municao no eixo Y
 

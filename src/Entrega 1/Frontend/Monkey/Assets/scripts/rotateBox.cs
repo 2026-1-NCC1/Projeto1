@@ -3,9 +3,9 @@ using UnityEngine;
 public class rotateBox : MonoBehaviour
 {
     //variaveis para controlar a velocidade de rotacao da caixa de municao
-    float speedX;
-    float speedY = 0.7f;
-    float speedZ;
+    public float speedX;
+    public float speedY = 0.7f;
+    public float speedZ;
 
     //faz a rotacao da caixa de municao no eixo Y
     void Update()

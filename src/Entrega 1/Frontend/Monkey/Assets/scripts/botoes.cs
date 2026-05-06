@@ -6,7 +6,7 @@ public class botoes : MonoBehaviour
 
     public void TentarNovamente()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1); // mudar depois para ir para a fase anterior
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); 
     }
     public void IniciarJogo()
     {
