@@ -29,6 +29,7 @@ public class playerLife : MonoBehaviour
     //Alem de chamar o metodo de game over (UI/feedback de q ele perdeu) apos um curto periodo de tempo
     public void Die()
     {
+        GetComponent<Animator>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<playerMove>().enabled = false;
