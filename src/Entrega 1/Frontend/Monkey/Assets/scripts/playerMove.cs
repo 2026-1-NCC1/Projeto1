@@ -67,7 +67,7 @@ public class playerMove : MonoBehaviour
     {
         if (hit.gameObject.tag == "fimFase" && spawnerControler.alvosAcertados >= spawnerControler.qtdAlvos)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);//colocar depois .buildIndex + 1);
+            SceneManager.LoadScene("Nivel02");
 
         }
         else if (hit.gameObject.tag == "fimFase")
