@@ -2467,7 +2467,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 240916492}
   playerObj: {fileID: 1632979734}
-  timer: 0.3
+  timer: 0.7
   tiroInimigo: {fileID: 7612941235258921378, guid: ccacc4cafed7141b3b1716c5943fe001, type: 3}
   bulletSpeed: 12
   playerFrente: 1
@@ -4536,7 +4536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2040447684}
   playerObj: {fileID: 1632979734}
-  timer: 0.3
+  timer: 0.7
   tiroInimigo: {fileID: 7612941235258921378, guid: ccacc4cafed7141b3b1716c5943fe001, type: 3}
   bulletSpeed: 12
   playerFrente: 1

@@ -10,27 +10,15 @@ public class spawnbullet : MonoBehaviour
     public GameObject tiroInimigo;
     public float bulletSpeed = 12f;
 
-    public bool playerFrente = true;
-
     void Update()
     {
-
-        if (playerFrente)
-        {
             // Olha para FRENTE: para de atirar se player passou (Z maior)
-            if (playerObj.position.z > transform.position.z)
-            {
-                return;
-            }
-        }
-        else
+        if (playerObj.position.z > transform.position.z)
         {
-            // Olha para TRÁS: para de atirar se player passou (Z menor)
-            if (playerObj.position.z < transform.position.z)
-            {
-                return;
-            }
+             return;
         }
+        
+
 
 
         bulletTime -= Time.deltaTime;
