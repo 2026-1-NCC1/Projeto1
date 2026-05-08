@@ -605,13 +605,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22889677, y: -0, z: -0, w: 0.9734507}
-  m_LocalPosition: {x: 0, y: 2.457, z: -3.506}
+  m_LocalRotation: {x: 0.26490614, y: -0, z: -0, w: 0.96427417}
+  m_LocalPosition: {x: 0, y: 3.079, z: -3.8520002}
   m_LocalScale: {x: 1.3333333, y: 1.3333335, z: 1.3333335}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1632979725}
-  m_LocalEulerAnglesHint: {x: 11.033, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30.723, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,7 +919,6 @@ MonoBehaviour:
   tempoVida: 4
   player: {fileID: 1820798633}
   municaoScript: {fileID: 1820798641}
-  textoPontos: {fileID: 901463508}
 --- !u!4 &560487100
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,7 +1456,7 @@ GameObject:
   - component: {fileID: 901463508}
   m_Layer: 5
   m_Name: indicadorPontos
-  m_TagString: Untagged
+  m_TagString: textoPontos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1865,15 +1864,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b7b20bc931c427e46a8b1918db64e552, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6
+      value: -1.768
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7b20bc931c427e46a8b1918db64e552, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7b20bc931c427e46a8b1918db64e552, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.97
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7b20bc931c427e46a8b1918db64e552, type: 3}
       propertyPath: m_LocalRotation.w

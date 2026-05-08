@@ -29,12 +29,12 @@ public class playerLife : MonoBehaviour
     //Alem de chamar o metodo de game over (UI/feedback de q ele perdeu) apos um curto periodo de tempo
     public void Die()
     {
-        GetComponent<Animator>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<playerMove>().enabled = false;
+        gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         dead = true;
         Invoke(nameof(GameOver), 0.8f);
+        
     }
 
     //metodo que carrega a cena de game over (feedback visual de que perdeu)

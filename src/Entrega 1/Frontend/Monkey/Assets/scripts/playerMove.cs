@@ -22,7 +22,7 @@ public class playerMove : MonoBehaviour
     //metodo que inicia a quantidade de alvos acertados em 0, pega o componente de rigidbody do player para facilitar a escrita depois
     void Start()
     {
-        spawnerControler.alvosAcertados = 0;
+        destruirObjetosTiro.alvosAcertados = 0;
         pontos = 0;
         rb = GetComponent<Rigidbody>();
     }
@@ -65,7 +65,7 @@ public class playerMove : MonoBehaviour
     //o metodo de morte do jogador
     private void OnCollisionEnter(Collision hit)
     {
-        if (hit.gameObject.tag == "fimFase" && spawnerControler.alvosAcertados >= spawnerControler.qtdAlvos)
+        if (hit.gameObject.tag == "fimFase" && destruirObjetosTiro.alvosAcertados >= destruirObjetosTiro.qtdAlvos)
         {
             SceneManager.LoadScene("Nivel02");
 

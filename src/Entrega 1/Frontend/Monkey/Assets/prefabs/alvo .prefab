@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7313293556836084114}
   - component: {fileID: -4849135323334442568}
   - component: {fileID: 4748429172908317468}
-  - component: {fileID: 6711273993642923246}
+  - component: {fileID: -2384822013017226460}
   m_Layer: 0
   m_Name: 'alvo '
   m_TagString: Untagged
@@ -159,7 +159,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6711273993642923246
+--- !u!114 &-2384822013017226460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf931cbc25e04a943af7dab3a7b630fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textoPontos: {fileID: 0}
