@@ -91,7 +91,7 @@ public class spawnerControler : MonoBehaviour
                 playerMove.pontos += 10;
                 textoPontos.text = "Pontos:" + playerMove.pontos;
             }
-            else if (hit.collider.CompareTag("inimigos"))
+            else if (hit.collider.CompareTag("inimigo"))
             {
                 // Cria o tiro
                 GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
