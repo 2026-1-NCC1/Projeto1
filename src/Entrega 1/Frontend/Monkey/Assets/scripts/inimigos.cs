@@ -27,11 +27,9 @@ public class inimigos : MonoBehaviour
         }
     }
 
-    // Usando TRIGGER 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-
-        if (other.CompareTag("limites") || other.CompareTag("obstaculos") || other.CompareTag("Player"))
+        if (collision.gameObject.tag == "limites" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "fimFase")
         {
             Destroy(gameObject);
         }

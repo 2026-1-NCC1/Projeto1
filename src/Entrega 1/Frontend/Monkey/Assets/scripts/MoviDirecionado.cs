@@ -65,7 +65,6 @@ public class moviDirecionado : MonoBehaviour
     {
         if (collision.gameObject.tag == "limites" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "fimFase")
         {
-            Debug.Log("colidiu com " + collision.gameObject.name);
             Destroy(gameObject);
         }
     }
