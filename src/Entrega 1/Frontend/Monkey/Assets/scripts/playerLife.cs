@@ -40,6 +40,7 @@ public class playerLife : MonoBehaviour
     //metodo que carrega a cena de game over (feedback visual de que perdeu)
     void GameOver()
     {
+        PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("GameOver");
     }
 }
