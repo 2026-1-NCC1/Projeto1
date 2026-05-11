@@ -61,10 +61,9 @@ public class moviDirecionado : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag=="limites" || collision.gameObject.tag=="obstaculos" || collision.gameObject.tag=="fimFase")
+        if (collision.gameObject.tag == "limites" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "fimFase")
         {
             Destroy(gameObject);
         }

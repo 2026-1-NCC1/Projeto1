@@ -15,6 +15,7 @@ TagManager:
   - alvoBonus
   - tiroInimigo
   - inimigo
+  - textoPontos
   layers:
   - Default
   - TransparentFX

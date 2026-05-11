@@ -18,7 +18,7 @@ public class playerLife : MonoBehaviour
     //metodo que verifica se o jogador colidiu com um obstaculo, limite ou alvo, caso tenha chama o metodo de morte
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites")
+        if (collision.gameObject.tag== "alvos" || collision.gameObject.tag == "obstaculos" || collision.gameObject.tag == "limites" || collision.gameObject.tag == "tiroInimigo")
         {
             Die();
             //string pro game over bateu em algum desses
@@ -29,12 +29,12 @@ public class playerLife : MonoBehaviour
     //Alem de chamar o metodo de game over (UI/feedback de q ele perdeu) apos um curto periodo de tempo
     public void Die()
     {
-        GetComponent<Animator>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<playerMove>().enabled = false;
+        gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         dead = true;
         Invoke(nameof(GameOver), 0.8f);
+        
     }
 
     //metodo que carrega a cena de game over (feedback visual de que perdeu)

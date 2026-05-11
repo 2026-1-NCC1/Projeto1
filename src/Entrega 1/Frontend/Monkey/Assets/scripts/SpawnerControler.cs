@@ -11,26 +11,15 @@ public class spawnerControler : MonoBehaviour
     public GameObject player;
     [SerializeField] Municao municaoScript;
 
-    Text textoAlvos;
-    public Text textoPontos;
-    public static int alvosAcertados = 0;
-    public static int qtdAlvos = 3;
-
-    private void Start()
-    {
-        alvosAcertados = 0;
-        textoAlvos = GameObject.FindWithTag("textoAlvos").GetComponent<Text>();
-    }
-
     void Update()
     {
         //se tem municao suficiente, pega o input do mouse click esquerdo para fazer o tiro spawnar e pega a localizaçao do player
         //diminui uma bala da variavel municao e atualiza o texto de municao para mostrar a quantidade atualizada de balas (feedback visual)
-        if (Input.GetMouseButtonDown(0) && (municaoScript.municao > 0))
+        if (Input.GetMouseButtonDown(0) && (Municao.municao > 0))
         {
-            Spawnar();
             player = GameObject.FindGameObjectWithTag("Player");
-            municaoScript.municao--;
+            Spawnar();
+            Municao.municao--;
             municaoScript.atualizarMunicao();
         }
     }
@@ -64,10 +53,7 @@ public class spawnerControler : MonoBehaviour
 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
 
-                alvosAcertados++;
-                textoAlvos.text = "Alvos:" + alvosAcertados;
-                playerMove.pontos += 5;
-                textoPontos.text = "Pontos:" + playerMove.pontos;
+                
             }
             //verifica se acerto o trigger do alvo bonus
             else if (hit.collider.CompareTag("alvoBonus"))
@@ -88,10 +74,9 @@ public class spawnerControler : MonoBehaviour
 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
 
-                playerMove.pontos += 10;
-                textoPontos.text = "Pontos:" + playerMove.pontos;
+               
             }
-            else if (hit.collider.CompareTag("inimigos"))
+            else if (hit.collider.CompareTag("inimigo"))
             {
                 // Cria o tiro
                 GameObject novoTiro = Instantiate(tiro, posicaoPlayer, Quaternion.identity);
@@ -109,8 +94,7 @@ public class spawnerControler : MonoBehaviour
 
                 Debug.Log("TIRO SEGUE: " + hit.collider.name);
 
-                playerMove.pontos += 15;
-                textoPontos.text = "Pontos:" + playerMove.pontos;
+                
             }
             else
             {
