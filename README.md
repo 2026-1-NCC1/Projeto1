@@ -38,7 +38,7 @@ Imagem de autoria do autor
 </p>
 <br><br>
 
-MonkeyUp é um jogo 3D projetado como um Runner Game com fases onde onde o jogador deve manter uma constância de vôo, nas quais a dificuldade aumenta progressivamente, combinado com elementos de Shooter contra inimigos. Nele o player joga como Ateles, um macaco prego que tenta resgatar a sua mãe que foi sequestrada por garimpeiros, dentro da floresta Amazônica.  
+MonkeyUp é um jogo 3D projetado como um Runner Game com fases onde o jogador deve manter uma constância de vôo, nas quais a dificuldade aumenta progressivamente, combinado com elementos de Shooter contra inimigos. Nele o player joga como Ateles, um macaco prego que tenta resgatar a sua mãe que foi sequestrada por garimpeiros, dentro da floresta Amazônica.  
 
 O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do jogador assim como de tiro, inimigos ativos e dois mapas diferentes, sendo um para cada fase. Esta versão consiste em:
 
@@ -96,7 +96,7 @@ O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do 
 
 **Link It IO:**
 
-Link de acesso para jogar o jogo na web. Basta clicar no link e jogar: 
+Link de acesso para jogar o jogo na web. Basta clicar no link e jogar: <https://gig-bueno.itch.io/monkeyup>
 
 **Windows:**
 
