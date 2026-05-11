@@ -1,11 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class playerMove : MonoBehaviour
 {
-    //declaracao de variaveis do rigidbody do player, a velocidade de movimento, a for�a do pulo, a velocida maxima do player
+    //declaracao de variaveis do rigidbody do player, a velocidade de movimento, a forca do pulo, a velocida maxima do player
     //o script do alvo para verificar a quantidade de alvos acertados e a vida do player para chamar o metodo de morte de outro script
     //os pontos do jogador, e o texto para mostrar os pontos (feedback)
 
@@ -14,7 +13,6 @@ public class playerMove : MonoBehaviour
     public float jumpForce = 7f;
     public float aceleracao = 0.01f;
     public float velocidadeMaxima = 15f;
-    [SerializeField] spawnerControler scriptAlvo;
     public playerLife life;
     public static int pontos = 0;
     
@@ -30,7 +28,7 @@ public class playerMove : MonoBehaviour
     void Update()
     {
 
-        //no momento da queda do pulo, a gravidade � aumentada para o player cair mais r�pido, dando uma sensacao melhor de queda
+        //no momento da queda do pulo, a gravidade e aumentada para o player cair mais rapido, dando uma sensacao melhor de queda
         if (rb.linearVelocity.y <= 0){
 
             Physics.gravity = new Vector3(0, -19.0F, 0);
@@ -73,7 +71,7 @@ public class playerMove : MonoBehaviour
         else if (hit.gameObject.tag == "fimFase")
         {
             life.Die();
-            //chegou no final da fase mas n acertou todos os alvos 
+            //chegou no final da fase mas nao acertou todos os alvos 
         }
     }
 

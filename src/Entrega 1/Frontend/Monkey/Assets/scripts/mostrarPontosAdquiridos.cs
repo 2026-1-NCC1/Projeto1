@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class mostrarPontosAdquiridos : MonoBehaviour
 {
     //variavel que contem o texto de quantos alvos o jogador acertou
