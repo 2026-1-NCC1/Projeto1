@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-// Classe para controlar os botões de navegação entre cenas do jogo
+// Classe para controlar os botï¿½es de navegaï¿½ï¿½o entre cenas do jogo
 public class botoes : MonoBehaviour
 {
     // Reinicia a cena anterior (usada geralmente na tela de "Game Over")
     public void TentarNovamente()
     {
-        int fase = PlayerPrefs.GetInt("FaseAtual"); // pega o valor da variável chamada "FaseAtual"
-        SceneManager.LoadScene(fase);
+        int fase = PlayerPrefs.GetInt("FaseAtual"); // pega o valor da variï¿½vel chamada "FaseAtual"
+        SceneManager.LoadScene("Nivel01");
     }
 
     // Inicia o jogo carregando a primeira fase
@@ -23,7 +23,7 @@ public class botoes : MonoBehaviour
         SceneManager.LoadScene("Menu"); // Carrega a cena chamada "Menu"
     }
 
-    // Avança para o próxima cena
+    // Avanï¿½a para o prï¿½xima cena
     public void Avancar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A partir de agora voc\xEA \xE9 Ateles, um macaco prego especial da Floresta
+  m_text: "A partir de agora voc\xEA \xE9 Ateles, um macaco prego\n especial da Floresta
     Amaz\xF4nica, que acabou de fugir com a sua fam\xEDlia de um laborat\xF3rio ilegal.
     E por que ele \xE9 especial? Depois de ser usado em testes cient\xEDficos ele
     passou a voar\u2026\n\nAgora, Ateles, est\xE1 indo atr\xE1s de sua m\xE3e que
