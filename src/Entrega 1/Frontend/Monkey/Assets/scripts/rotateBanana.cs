@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class rotateBanana : MonoBehaviour
 {
-    //variaveis para controlar a velocidade de rotacao da caixa de municao
+    //variaveis para controlar a velocidade de rotacao da banana
     float speedX;
     float speedY;
     float speedZ = 5f;
 
-    //faz a rotacao da caixa de municao no eixo Y
+    //faz a rotacao inicial da banana no eixo Y e depois rotaciona a banana constantemente no eixo Z, girando no ar
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class rotateBanana : MonoBehaviour
     }
     void Update()
     {
-        transform.Rotate(360 * speedX * Time.deltaTime, speedY, 360 * speedZ * Time.deltaTime);
+        transform.Rotate(speedX, speedY, 360 * speedZ * Time.deltaTime);
 
     }
 
