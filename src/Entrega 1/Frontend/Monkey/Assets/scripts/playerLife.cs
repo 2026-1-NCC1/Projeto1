@@ -37,9 +37,29 @@ public class playerLife : MonoBehaviour
         
     }
 
+    //metodo que desativa o mesh renderer, o rigidbody e o script de movimento do jogador (assim o personagem some e nao se move mais
+    //Alem de chamar o metodo a tela de vitória respectiva da fase (UI/feedback de q ele ganhou) apos um curto periodo de tempo
+
+    public void Win()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<playerMove>().enabled = false;
+        gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        dead = true;
+        Invoke(nameof(Vitoria), 0.8f);
+    }
+
     //metodo que carrega a cena de game over (feedback visual de que perdeu)
     void GameOver()
     {
+        PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("GameOver");
+    }
+
+    //método que carrega a tela de vitoria do jogo, tanto na fase1 quanro na fase 2
+    void Vitoria()
+    {
+        PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 }

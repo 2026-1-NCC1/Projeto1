@@ -59,19 +59,19 @@ public class playerMove : MonoBehaviour
     }
 
     //metodo que detecta a colisao do player com o fim da fase, e verifica se o player acertou a quantidade de alvos necessaria para passar de fase,
-    //se sim ele carrega a proxima fase (como ainda nao tem proxima fase, ele volta pro comeco), caso contrario (e tenha acertado o fim da fase) chama
-    //o metodo de morte do jogador
+    //se sim ele carrega a fase de vitoria, caso contrario (e tenha acertado o fim da fase) chama o metodo de morte do jogador
     private void OnCollisionEnter(Collision hit)
     {
-        if (hit.gameObject.tag == "fimFase" && destruirObjetosTiro.alvosAcertados >= destruirObjetosTiro.qtdAlvos)
+        if (hit.gameObject.tag == "fimFase")
         {
-            SceneManager.LoadScene("Nivel02");
-
-        }
-        else if (hit.gameObject.tag == "fimFase")
-        {
-            life.Die();
-            //chegou no final da fase mas nao acertou todos os alvos 
+            if (destruirObjetosTiro.alvosAcertados >= destruirObjetosTiro.qtdAlvos)
+                {
+                    life.Win();
+                }
+            else
+                {
+                    life.Die();
+                }
         }
     }
 
