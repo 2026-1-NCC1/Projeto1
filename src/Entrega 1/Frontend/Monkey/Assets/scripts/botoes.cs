@@ -40,4 +40,15 @@ public class botoes : MonoBehaviour
     {
         SceneManager.LoadScene("Nivel02");
     }
+
+    public void Quit()
+    {
+      Debug.Log("Saindo do jogo...");
+
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif  
+    }
 }
