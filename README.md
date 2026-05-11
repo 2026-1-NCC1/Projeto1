@@ -64,29 +64,33 @@ O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do 
 
 |-->documentos<br>
 
-&emsp;|-->Entrega 1
-&emsp;&emsp;|-->Cálculo
-&emsp;&emsp;|-->Lógica
-&emsp;&emsp;|-->Projeto Interdisciplina
+&emsp;|-->Entrega 1<br>
+
+&emsp;&emsp;|-->Cálculo<br>
+&emsp;&emsp;|-->Lógica<br>
+&emsp;&emsp;|-->Projeto Interdisciplina<br>
 &emsp;&emsp;|-->Ética<br>
-&emsp;|-->Entrega 2
-&emsp;&emsp;|-->Cálculo
-&emsp;&emsp;|-->Lógica
-&emsp;&emsp;|-->Projeto Interdisciplinar
-&emsp;&emsp;|-->Ética
+
+&emsp;|-->Entrega 2<br>
+
+&emsp;&emsp;|-->Cálculo<br>
+&emsp;&emsp;|-->Lógica<br>
+&emsp;&emsp;|-->Projeto Interdisciplinar<br>
+&emsp;&emsp;|-->Ética<br>
 
 |-->imagens<br>
 
 |-->src<br>
-&emsp;|-->Entrega 1
-&emsp;&emsp;|-->Backend
-&emsp;&emsp;&emsp;|-->Frontend
-&emsp;&emsp;&emsp;&emsp;| MonkeyUp
 
-&emsp;|-->Entrega 2
-&emsp;&emsp;|-->Backend
-&emsp;&emsp;&emsp;|-->Frontend
-&emsp;&emsp;&emsp;&emsp;| MonkeyUp
+&emsp;|-->Entrega 1<br>
+&emsp;&emsp;|-->Backend<br>
+&emsp;&emsp;&emsp;|-->Frontend<br>
+&emsp;&emsp;&emsp;&emsp;| MonkeyUp<br>
+
+&emsp;|-->Entrega 2<br>
+&emsp;&emsp;|-->Backend<br>
+&emsp;&emsp;&emsp;|-->Frontend<br>
+&emsp;&emsp;&emsp;&emsp;| MonkeyUp<br>
 
 
 |readme.md<br>
