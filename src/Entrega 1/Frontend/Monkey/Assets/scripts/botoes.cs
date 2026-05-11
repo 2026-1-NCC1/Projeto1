@@ -8,7 +8,7 @@ public class botoes : MonoBehaviour
     public void TentarNovamente()
     {
         int fase = PlayerPrefs.GetInt("FaseAtual"); // pega o valor da vari�vel chamada "FaseAtual"
-        SceneManager.LoadScene("Nivel01");
+        SceneManager.LoadScene(fase);
     }
 
     // Inicia o jogo carregando a primeira fase

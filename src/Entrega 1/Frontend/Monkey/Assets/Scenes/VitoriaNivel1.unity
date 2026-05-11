@@ -427,7 +427,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 697418865}
         m_TargetAssemblyTypeName: botoes, Assembly-CSharp
-        m_MethodName: TentarNovamente
+        m_MethodName: JogarFase1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
