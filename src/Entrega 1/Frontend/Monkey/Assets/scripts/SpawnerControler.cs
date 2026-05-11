@@ -7,7 +7,7 @@ public class spawnerControler : MonoBehaviour
     public GameObject tiro;
     public float veloMovimento = 5f;
     public float tempoVida = 3f;
-    public GameObject player;
+    GameObject player;
     [SerializeField] Municao municaoScript;
 
     // Verifica o input do clique esquerdo e se tem municao, spawna o tiro e atualiza a UI

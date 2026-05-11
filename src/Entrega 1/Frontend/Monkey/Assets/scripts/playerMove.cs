@@ -13,7 +13,6 @@ public class playerMove : MonoBehaviour
     public float jumpForce = 7f;
     public float aceleracao = 0.01f;
     public float velocidadeMaxima = 15f;
-    [SerializeField] spawnerControler scriptAlvo;
     public playerLife life;
     public static int pontos = 0;
     
