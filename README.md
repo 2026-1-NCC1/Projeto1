@@ -2,8 +2,7 @@
 
   
 
-<p  align="center">
-
+<p align="center">
 <a  href= "https://www.fecap.br/"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU"  alt="FECAP - Fundação de Comércio Álvares Penteado"  border="0"></a>
 
 </p>
@@ -18,7 +17,7 @@
 
   
 
-## Integrantes: <a  href="www.linkedin.com/in/giovanna-bueno-7522aa239/">Giovanna Bueno</a>, <a  href="">Olívia Farias</a>, <a  href="https://www.linkedin.com/in/gabriel-oliveira-a691b2353/">Gabriel Carrocci</a>, <a  href="https://www.linkedin.com/in/maria-maduarte/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNFM68mNfQdin5T2RNC%2B55g%3D%3D">Maria Eduarda Magalhães</a>, 
+## Integrantes: <a  href="www.linkedin.com/in/giovanna-bueno-7522aa239/">Giovanna Bueno</a>, <a  href="">Olívia Farias</a>, <a  href="https://www.linkedin.com/in/gabriel-oliveira-a691b2353/">Gabriel Carrocci</a> 
 
   
 
@@ -31,24 +30,30 @@
   
 
 <p  align="center">
+<img  src="https://raw.githubusercontent.com/2026-1-NCC1/Projeto1/df98d8193af297f67722d2cbc13cb7142d857b97/imagens/Monkey%20Up-2.jpg">
 
-<img  src="https://raw.githubusercontent.com/2026-1-NCC1/Projeto1/c79ae2448f94562d8e31159149cbb50a6c931f0f/imagens/MonkeyUp.png">
-
-Game by <a  href="http://www.nyphotographic.com/">Youngson</a>  <a  rel="license"  href="https://creativecommons.org/licenses/by-sa/3.0/"><a href="https://raw.githubusercontent.com/2026-1-NCC1/Projeto1/c79ae2448f94562d8e31159149cbb50a6c931f0f/imagens/MonkeyUp.png">MonkeyUp</a> © 2026 by <a href="https://example.com">João de Barro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></a>  <a  href="http://pix4free.org/">Pix4free</a>
+<p  align="center">
+Imagem de autoria do autor
 
 </p>
 <br><br>
 
-MonkeyUp é um jogo 3D projetado como um Runner Game com fases, nas quais a dificuldade aumenta progressivamente, combinado com elementos de Shooter contra inimigos.  
-O jogo, em seu estado atual, apresenta as mecânicas de movimentação do jogador, bem como um mapa básico para testes. Esta primeira versão consiste em:
+MonkeyUp é um jogo 3D projetado como um Runner Game com fases onde onde o jogador deve manter uma constância de vôo, nas quais a dificuldade aumenta progressivamente, combinado com elementos de Shooter contra inimigos. Nele o player joga como Ateles, um macaco prego que tenta resgatar a sua mãe que foi sequestrada por garimpeiros, dentro da floresta Amazônica.  
+
+O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do jogador assim como de tiro, inimigos ativos e dois mapas diferentes, sendo um para cada fase. Esta versão consiste em:
 
  - Ser um Casual Game desenvolvido para Desktop  
- - Ser desenvolvido na engine Unity (v. 6000.0.38f1)  
- - Possuir mecânicas básicas para testes iniciais do projeto  
- - Focar mais no aspecto mecânico do que no visual  
-<br><br>
+ - Ser um jogo desenvolvido na engine Unity (v. 6000.0.38f1)  
+ - Possuir mecânicas completas a serem testadas nas duas fases  
 
-<br><br>
+
+**Como vencer?**
+ - Chegue ao final da fase sem subir ou descer demais com o player e sem colidir com obstáculos ou ser atingido 
+
+**Como perder?**
+ - Colidindo com obstáculos ou sendo atingido
+ - Subindo ou descendo além do limite permitido  
+
 ## 🛠 Estrutura de pastas
 
   
@@ -59,25 +64,47 @@ O jogo, em seu estado atual, apresenta as mecânicas de movimentação do jogado
 
 |-->documentos<br>
 
-&emsp;|-->Entrega 1<br>
-&emsp;&emsp;|-->Cálculo<br>
-&emsp;&emsp;|-->Lógica<br>
-&emsp;&emsp;|-->Projeto Interdisciplinar<br>
+&emsp;|-->Entrega 1
+&emsp;&emsp;|-->Cálculo
+&emsp;&emsp;|-->Lógica
+&emsp;&emsp;|-->Projeto Interdisciplina
 &emsp;&emsp;|-->Ética<br>
+&emsp;|-->Entrega 2
+&emsp;&emsp;|-->Cálculo
+&emsp;&emsp;|-->Lógica
+&emsp;&emsp;|-->Projeto Interdisciplinar
+&emsp;&emsp;|-->Ética
 
 |-->imagens<br>
 
 |-->src<br>
 &emsp;|-->Entrega 1
+&emsp;&emsp;|-->Backend
+&emsp;&emsp;&emsp;|-->Frontend
+&emsp;&emsp;&emsp;&emsp;| MonkeyUp
 
-&emsp;
-&emsp;|-->Backend<br>
+&emsp;|-->Entrega 2
+&emsp;&emsp;|-->Backend
+&emsp;&emsp;&emsp;|-->Frontend
+&emsp;&emsp;&emsp;&emsp;| MonkeyUp
 
-&emsp;&emsp;|-->Frontend<br>
-&emsp;&emsp;&emsp;| MonkeyUp
 
 |readme.md<br>
 |gitignore.
+
+## 🛠 Instalação
+
+**Link It IO:**
+
+Link de acesso para jogar o jogo na web. Basta clicar no link e jogar: 
+
+**Windows:**
+
+Não há instalação! Apenas executável! Encontre o link da pasta do Google drive na pasta executáveis, nela estará o Monkey.exe, e execute-o como qualquer outro programa.
+
+**HTML:**
+
+Não há instalação! Encontre o link da pasta do Google drive na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
 ## 💻 Configuração para Desenvolvimento
 
@@ -86,21 +113,26 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   
 - <a href="https://unity.com/download">Unity Hub</a>  
 - Unity (v. 6000.0.38f1) 
+- Visual Studio Code
   
 ```sh  
 # Passos para rodar o projeto  
   
-1. Abra o Unity Hub  
-2. Clique em "Open"  
-3. Selecione a pasta do projeto  
-4. Abra o projeto  
-5. Clique em "Play" dentro da Unity
+1. Instale o UnityHub e a versão do editor do projeto, Unity (v. 6000.0.38f1)
+2. Clone este repositório na sua máquina local 
+3. Abra o Unity Hub  
+4. Clique em "Open"  
+5. Selecione a pasta em que clonou o repositório do projeto 
+6. Vá até a pasta Monkey seguindo esse caminho src > Entrega 2 > Frontend > Monkey
+7. Abra a pasta Monkey, onde esta o projeto  
+8. Clique no projeto que aparecerá no Unity
+9. Caso queira acessar os códigos clique nos scripts e abra-os no Visual Studio Code
 ```
   
 
 ## 📋 Licença/License
 
-<a href="https://example.com">MonkeyUp</a> © 2026 by <a href="https://example.com">JoaoDeBarro</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+[<a href="https://example.com">MonkeyUp</a> © 2026 by <a href="https://example.com">Giovanna Bueno, Gabriel Carrocci, Olivia Alves, FECAP</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>](https://example.com/)
 
   
 
@@ -124,3 +156,8 @@ Aqui estão as referências usadas no projeto.
 7. <https://youtu.be/HwI90YLqMaY?si=fWOSnFaGodpNTzr5>
 8. <https://docs.unity.com/en-us>
 9. <https://www.youtube.com/@yggbrasiledu>
+10. UNITY TECHNOLOGIES. Unity Documentation. Disponível em: https://docs.unity.com.
+
+11. IURICODE. README Template. Disponível em: github.com/iuricode/readme-template.
+
+12. SCHELL, Jesse. The ArtofGame Design : ABook of Lenses . Boca Raton: CRC Press, 2014. Disponível em: github.com/media-lib/prog_lib. 
