@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class mostrarAlvosAcertados : MonoBehaviour
 {
     //variavel que contem o texto de quantos alvos o jogador acertou

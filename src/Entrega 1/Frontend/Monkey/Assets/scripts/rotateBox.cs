@@ -10,7 +10,7 @@ public class rotateBox : MonoBehaviour
     //faz a rotacao da caixa de municao no eixo Y
     void Update()
     {
-        transform.Rotate(360 * speedX * Time.deltaTime, 360 * speedY * Time.deltaTime, 360 * speedZ * Time.deltaTime);
+        transform.Rotate(speedX, 360 * speedY * Time.deltaTime,speedZ);
     }
 
 }
