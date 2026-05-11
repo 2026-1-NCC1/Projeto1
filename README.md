@@ -63,6 +63,7 @@ O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do 
 |<br>
 
 |-->documentos<br>
+&emsp;|-->Projeto de Extensão - COM Empresa <br>
 
 &emsp;|-->Entrega 1<br>
 &emsp;&emsp;|-->Cálculo<br>
@@ -72,7 +73,6 @@ O jogo, em seu estado atual, apresenta todas as mecânicas de movimentação do 
 &emsp;|-->Entrega 2<br>
 &emsp;&emsp;|-->Cálculo<br>
 &emsp;&emsp;|-->Lógica<br>
-&emsp;&emsp;|-->Projeto Interdisciplinar<br>
 &emsp;&emsp;|-->Ética<br>
 
 |-->imagens<br>
